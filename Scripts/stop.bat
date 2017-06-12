@@ -1,0 +1,1 @@
+net stop ZoneFox.Bl.Nesper
