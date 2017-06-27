@@ -95,7 +95,8 @@ namespace ZF.BL.Nesper.Model
             //statement.Subscriber = subscriber;
 
 			//New method for attaching to nesper
-            statement.Events += subscriber.Update;
+            if(statement != null)
+                statement.Events += subscriber.Update;
         }
 
         public void Validate(string id, string epl)
@@ -221,7 +222,7 @@ namespace ZF.BL.Nesper.Model
             var parser = new EplParser();
             bool shouldParse = parser.HasSubscriptionMarkers(epl);
 
-            EPStatement epStatement;
+            EPStatement epStatement = null;
 
             // Check if a block is present
             if (shouldParse) // yes
@@ -263,7 +264,8 @@ namespace ZF.BL.Nesper.Model
 
                 // create epl that will be linked with a subscriber
                 _log.Info("Creating statement that fires alert");
-                epStatement = _engine.EPAdministrator.CreateEPL(tuple.StatementToFireAlert, id);
+                if(!string.IsNullOrWhiteSpace(tuple.StatementToFireAlert))
+                    epStatement = _engine.EPAdministrator.CreateEPL(tuple.StatementToFireAlert, id);
             }
             else
             {
