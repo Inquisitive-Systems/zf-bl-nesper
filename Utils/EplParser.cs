@@ -80,8 +80,8 @@ namespace ZF.BL.Nesper.Utils
             }
 
             len = idxEnd - idxStart + 1;
-            if(len > 0)
-                output.StatementToFireAlert = input.Substring(idxStart, len);
+
+            output.StatementToFireAlert = input.Substring(idxStart, len);
 
             return output;
         }
