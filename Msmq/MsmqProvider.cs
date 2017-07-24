@@ -26,8 +26,6 @@ namespace ZF.BL.Nesper.Msmq
                                 ? MessageQueue.Create(queuePath, false)
                                 : new MessageQueue(queuePath, false, true, QueueAccessMode.Receive);
 
-            _messageQueue.SetPermissions("ANONYMOUS LOGON", MessageQueueAccessRights.FullControl);
-
             _messageQueue.Formatter = new JsonGzipMessageFormatter<T>();
             var filter = new MessagePropertyFilter();
             filter.ClearAll();
