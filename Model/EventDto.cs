@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace ZF.BL.Nesper.Model
@@ -69,7 +70,10 @@ namespace ZF.BL.Nesper.Model
         public string Ap { get; set; }
         public string Ac { get; set; }
         public string R { get; set; }
-        
+        public string File { get; set; }
+        public string Ext { get; set; }
+        public List<string> Folder { get; set; }
+
         /// <summary>
         /// Metadata Network
         /// </summary>
@@ -85,7 +89,10 @@ namespace ZF.BL.Nesper.Model
                 Activity = Ac,
                 Application = Ap,
                 Resource = R,
-                NetworkEvent = Mn
+                NetworkEvent = Mn,
+                File = File,
+                Ext = Ext,
+                Folder = Folder
             };
         }
 
