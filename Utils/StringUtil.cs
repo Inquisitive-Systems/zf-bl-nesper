@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 
 namespace ZF.BL.Nesper.Utils
 {
@@ -30,6 +31,17 @@ namespace ZF.BL.Nesper.Utils
                 return false;
             }
 
+        }
+
+        public static bool ContainsFolders(string[] policyFolders, string[] eventFolders)
+        {
+            if (eventFolders == null|| policyFolders == null)
+                return false;
+
+            if (!eventFolders.Any() || !policyFolders.Any())
+                return false;
+
+            return eventFolders.Any(x => policyFolders.Any(y => y == x));
         }
     }
 }
