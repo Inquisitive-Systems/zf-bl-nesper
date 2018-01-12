@@ -91,7 +91,7 @@ namespace ZF.BL.Nesper.Model
                 Resource = R,
                 NetworkEvent = Mn,
                 File = File,
-                Ext = Ext,
+                Extension = Ext,
                 Folder = Folder
             };
         }

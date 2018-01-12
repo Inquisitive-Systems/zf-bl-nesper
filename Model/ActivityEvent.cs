@@ -11,7 +11,7 @@ namespace ZF.BL.Nesper.Model
         public string Activity { get; set; }
         public string Resource { get; set; }
         public string File { get; set; }
-        public string Ext { get; set; }
+        public string Extension { get; set; }
         public List<string> Folder { get; set; }
 
         //THIS CANNOT BE UPDATED TO DATETIMEOFFSET AS NESPER HAS LITERALLY NO IDEA ABOUT IT.
