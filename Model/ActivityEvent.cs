@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ZF.BL.Nesper.Model
 {
@@ -13,19 +14,15 @@ namespace ZF.BL.Nesper.Model
         public string File { get; set; }
         public string Extension { get; set; }
 
-        public List<string> Folder
+        public List<string> Folder { get; set; }
+
+        public string FlattenedFolders
         {
-            get => _folder;
-            set
+            get
             {
-                _folder = value;
-                FlattenedFolders = string.Join(",", value);
+                return Folder.Any() ? string.Join(",", Folder) : string.Empty;
             }
         }
-
-        private List<string> _folder;
-
-        public string FlattenedFolders { get; set; }
 
         //THIS CANNOT BE UPDATED TO DATETIMEOFFSET AS NESPER HAS LITERALLY NO IDEA ABOUT IT.
         public DateTime OccurredOn { get; set; }
