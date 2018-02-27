@@ -21,9 +21,9 @@ namespace ZF.BL.Nesper.Utils
             Exclusive
         }
 
-        public static string TrimEnd(string input, string trimSting)
+        public static string TrimEnd(string input, string trimString)
         {
-            return input.TrimEnd(trimSting.ToCharArray());
+            return input.TrimEnd(trimString.ToCharArray());
         }
 
         public static bool FirstStringStartsWithSecond(string first, string second)
