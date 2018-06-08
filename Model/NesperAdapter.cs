@@ -53,14 +53,14 @@ namespace ZF.BL.Nesper.Model
             var evConfig = new ConfigurationEventTypeLegacy();
             evConfig.PropertyResolutionStyle = PropertyResolutionStyle.CASE_INSENSITIVE;
             cfg.AddEventType<ActivityEvent>(typeof(ActivityEvent).Name, evConfig);
-            cfg.EngineDefaults.ThreadingConfig.IsInternalTimerEnabled = true;
-            cfg.EngineDefaults.ThreadingConfig.IsInsertIntoDispatchPreserveOrder = false;
-            cfg.EngineDefaults.ThreadingConfig.IsListenerDispatchPreserveOrder = false;
-            cfg.EngineDefaults.LoggingConfig.IsEnableExecutionDebug = false;
-            cfg.EngineDefaults.LoggingConfig.IsEnableADO = false;
-            cfg.EngineDefaults.LoggingConfig.IsEnableQueryPlan = false;
-            cfg.EngineDefaults.LoggingConfig.IsEnableTimerDebug = false;
-            cfg.EngineDefaults.ViewResourcesConfig.IsShareViews = false;
+            cfg.EngineDefaults.Threading.IsInternalTimerEnabled = true;
+            cfg.EngineDefaults.Threading.IsInsertIntoDispatchPreserveOrder = false;
+            cfg.EngineDefaults.Threading.IsListenerDispatchPreserveOrder = false;
+            cfg.EngineDefaults.Logging.IsEnableExecutionDebug = false;
+            cfg.EngineDefaults.Logging.IsEnableADO = false;
+            cfg.EngineDefaults.Logging.IsEnableQueryPlan = false;
+            cfg.EngineDefaults.Logging.IsEnableTimerDebug = false;
+            cfg.EngineDefaults.ViewResources.IsShareViews = false;
             cfg.AddImport<StringUtil>();
 
             _engine = EPServiceProviderManager.GetDefaultProvider(cfg);
