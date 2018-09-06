@@ -88,13 +88,8 @@ namespace ZF.BL.Nesper.Model
 
             //add subscriber for alerts
             _log.Info("Attaching subscriber");
-            ILog alertLog = LogManager.GetLogger(BlLog.AlertsLog);
-            var subscriber = new NesperEventSubscriber(_alertBuffer, id, alertLog);
+            var subscriber = new NesperEventSubscriber(_alertBuffer, id);
 
-			//Old method for attaching to nesper
-            //statement.Subscriber = subscriber;
-
-			//New method for attaching to nesper
             if(statement != null)
                 statement.Events += subscriber.Update;
         }

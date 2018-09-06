@@ -104,6 +104,7 @@
     <Compile Include="Model\AlertProduceReason.cs" />
     <Compile Include="Model\EventDto.cs" />
     <Compile Include="Model\HardwareInfoRetriever.cs" />
+    <Compile Include="Model\ListExtensions.cs" />
     <Compile Include="Model\NesperModuleItem.cs" />
     <Compile Include="Model\PerformanceStatsRetriever.cs" />
     <Compile Include="Model\Region.cs" />
