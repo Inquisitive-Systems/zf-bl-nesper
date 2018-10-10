@@ -1,0 +1,1 @@
+..\ZoneFox.Bl.Nesper.exe --console

@@ -1,0 +1,1 @@
+installutil.exe -u ..\ZoneFox.Bl.Nesper.exe
