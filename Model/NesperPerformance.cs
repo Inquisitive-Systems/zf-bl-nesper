@@ -75,7 +75,7 @@ namespace ZF.BL.Nesper.Model
             int cpu = _perfStatsRetriever.GetCpuPercentageUsedByCurrentProcess();
             int memFree = _perfStatsRetriever.GetFreeSystemMemory();
             int memUsed = _perfStatsRetriever.GetMemoryUsedByCurrentProcess();
-            _proxy.PerformanceInfoUpdate(cpu, memUsed, memFree, (int) eventRate, (int) alertRate);
+            _proxy.PerformanceInfoUpdate(cpu, memUsed, memFree, (int) eventRate, (int) alertRate, TotalEvents, TotalAlerts);
 
             _sw.Restart();
         }

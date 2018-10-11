@@ -23,6 +23,7 @@ namespace ZF.BL.Nesper.Wcf.Client
             int memoryUsedByCurrentProcess,
             int freeSystemMemory,
             int eventProcessingRate,
-            int alertProcessingRate);
+            int alertProcessingRate,
+            long totalEvents, long totalAlerts);
     }
 }
