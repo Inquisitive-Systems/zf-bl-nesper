@@ -26,12 +26,12 @@ namespace ZF.BL.Nesper.Wcf.Client
 
         public void PerformanceInfoUpdate(
             int cpuPercentageUsedByCurrentProcess, int memoryUsedByCurrentProcess,
-            int freeSystemMemory, int eventProcessingRate, int alertProcessingRate)
+            int freeSystemMemory, int eventProcessingRate, int alertProcessingRate, long totalEvents, long totalAlerts)
         {
             _proxy.InvokeRemoteAction(() =>
                                       _service.PerformanceInfoUpdate(
                                           cpuPercentageUsedByCurrentProcess, memoryUsedByCurrentProcess,
-                                          freeSystemMemory, eventProcessingRate, alertProcessingRate));
+                                          freeSystemMemory, eventProcessingRate, alertProcessingRate, totalEvents, totalAlerts));
         }
 
         public void Dispose()
