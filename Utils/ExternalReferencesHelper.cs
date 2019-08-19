@@ -19,7 +19,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 using Castle.Core;
 using Common.Logging;
-using Nito.KitchenSink.CRC;
+using Force.Crc32;
 
 namespace ZF.BL.Nesper.Utils
 {
@@ -38,7 +38,7 @@ namespace ZF.BL.Nesper.Utils
         // ReSharper disable UnusedMember.Local
         private IServiceProviderEx _ex;
         private IConfigurationReader _r;
-        private CRC16 _crc16;
+        private Crc32Algorithm _crc;
 
         // ReSharper restore UnusedMember.Local
 #pragma warning restore 0169
